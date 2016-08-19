@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "bee5246c6b0404f587d030bbaa63ee9f",
-    "content-hash": "95307ed016cee07ad55c01b8178ffe3d",
+    "hash": "b52aad0625af8f4174343cedac7497cd",
+    "content-hash": "9302bd9f0f1a2d9110769eeb1b4daece",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -283,6 +283,65 @@
                 "spl"
             ],
             "time": "2015-12-25 13:18:31"
+        },
+        {
+            "name": "doctrine/data-fixtures",
+            "version": "v1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/data-fixtures.git",
+                "reference": "b3cae5efef97191a08d53d733260f7eb667c16e4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/data-fixtures/zipball/b3cae5efef97191a08d53d733260f7eb667c16e4",
+                "reference": "b3cae5efef97191a08d53d733260f7eb667c16e4",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/common": "~2.2",
+                "php": "^5.6 || ^7.0"
+            },
+            "conflict": {
+                "doctrine/orm": "< 2.4"
+            },
+            "require-dev": {
+                "doctrine/dbal": "^2.5.4",
+                "doctrine/orm": "^2.5.4",
+                "phpunit/phpunit": "^5.4.6"
+            },
+            "suggest": {
+                "doctrine/mongodb-odm": "For loading MongoDB ODM fixtures",
+                "doctrine/orm": "For loading ORM fixtures",
+                "doctrine/phpcr-odm": "For loading PHPCR ODM fixtures"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Doctrine\\Common\\DataFixtures": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                }
+            ],
+            "description": "Data Fixtures for all Doctrine Object Managers",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "database"
+            ],
+            "time": "2016-06-20 18:08:26"
         },
         {
             "name": "doctrine/dbal",
@@ -775,6 +834,165 @@
             "time": "2016-01-05 21:34:58"
         },
         {
+            "name": "doctrine/phpcr-bundle",
+            "version": "1.3.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/DoctrinePHPCRBundle.git",
+                "reference": "15c30e6d9f40eba80c326f8e50733c42f5e68a69"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/DoctrinePHPCRBundle/zipball/15c30e6d9f40eba80c326f8e50733c42f5e68a69",
+                "reference": "15c30e6d9f40eba80c326f8e50733c42f5e68a69",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.3.9|~7.0",
+                "phpcr/phpcr-implementation": "2.1.*",
+                "phpcr/phpcr-utils": "^1.2.7",
+                "symfony/doctrine-bridge": "~2.3|~3.0",
+                "symfony/framework-bundle": "~2.3|~3.0"
+            },
+            "conflict": {
+                "phpcr/phpcr-shell": "<1.0.0-beta1",
+                "symfony/framework-bundle": "<2.3.27|>=2.4.0,<2.6.6"
+            },
+            "require-dev": {
+                "doctrine/phpcr-odm": "^1.3.0-rc4",
+                "matthiasnoback/symfony-dependency-injection-test": "~0.7",
+                "phpunit/php-code-coverage": "~2.2",
+                "phpunit/phpunit": "~4.5",
+                "sllh/php-cs-fixer-styleci-bridge": "~1.1",
+                "symfony-cmf/testing": "^1.3.0",
+                "symfony/form": "~2.3|~3.0"
+            },
+            "suggest": {
+                "burgov/key-value-form-bundle": "to edit assoc multivalue properties. require version 1.0.*",
+                "doctrine/data-fixtures": "if you want to use the fixture loading.",
+                "doctrine/doctrine-bundle": "when using jackalope-doctrine-dbal",
+                "doctrine/phpcr-odm": "if you want to use the odm as well. require version ^1.3",
+                "jackalope/jackalope-doctrine-dbal": "if you want to use jackalope-doctrine-dbal. require version ^1.3",
+                "jackalope/jackalope-jackrabbit": "if you want to connect to jackrabbit. require version ^1.3",
+                "phpcr/phpcr-shell": "If you want native access to PHPCR-Shell to manage the PHPCR repository"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Bundle\\PHPCRBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Lukas Kahwe Smith",
+                    "email": "smith@pooteeweet.org"
+                }
+            ],
+            "description": "Symfony DoctrinePHPCRBundle",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "database",
+                "odm",
+                "persistence",
+                "phpcr"
+            ],
+            "time": "2016-06-04 08:06:14"
+        },
+        {
+            "name": "doctrine/phpcr-odm",
+            "version": "1.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/phpcr-odm.git",
+                "reference": "ba31531633b9be60d44982cd90e8bcecafce0bf4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/phpcr-odm/zipball/ba31531633b9be60d44982cd90e8bcecafce0bf4",
+                "reference": "ba31531633b9be60d44982cd90e8bcecafce0bf4",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/annotations": "^1.2",
+                "doctrine/common": "^2.4",
+                "doctrine/data-fixtures": "^1.0",
+                "doctrine/instantiator": "^1.0.1",
+                "php": "^5.3.9|~7.0",
+                "phpcr/phpcr": "^2.1.1",
+                "phpcr/phpcr-implementation": "^2.1.0",
+                "phpcr/phpcr-utils": "^1.2.8",
+                "symfony/console": "^2.3|^3.0"
+            },
+            "conflict": {
+                "jackalope/jackalope-doctrine-dbal": "<1.1.5"
+            },
+            "require-dev": {
+                "liip/rmt": "~1.2",
+                "phpunit/phpunit": "*",
+                "symfony/phpunit-bridge": "^2.7|^3.0",
+                "symfony/yaml": "^2.3|^3.0"
+            },
+            "suggest": {
+                "jackalope/jackalope-doctrine-dbal": "^1.1.5",
+                "jackalope/jackalope-jackrabbit": "^1.0",
+                "symfony/yaml": "^2.3|^3.0"
+            },
+            "bin": [
+                "bin/phpcrodm",
+                "bin/phpcrodm.php"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\ODM\\PHPCR\\": "lib/Doctrine/ODM/PHPCR"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Lukas Kahwe Smith",
+                    "email": "smith@pooteeweet.org"
+                },
+                {
+                    "name": "David Buchmann",
+                    "email": "david@liip.ch"
+                },
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be"
+                }
+            ],
+            "description": "Object-Document-Mapper for PHPCR",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "database",
+                "odm",
+                "phpcr"
+            ],
+            "time": "2016-06-18 09:06:05"
+        },
+        {
             "name": "incenteev/composer-parameter-handler",
             "version": "v2.1.2",
             "source": {
@@ -877,6 +1095,70 @@
                 "phpcr"
             ],
             "time": "2015-12-01 13:48:15"
+        },
+        {
+            "name": "jackalope/jackalope-doctrine-dbal",
+            "version": "1.2.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jackalope/jackalope-doctrine-dbal.git",
+                "reference": "2116bbe24e72a9c4cd22eeb6d7e857ce62de094a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jackalope/jackalope-doctrine-dbal/zipball/2116bbe24e72a9c4cd22eeb6d7e857ce62de094a",
+                "reference": "2116bbe24e72a9c4cd22eeb6d7e857ce62de094a",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/dbal": ">=2.4.5,<3.0.x-dev",
+                "jackalope/jackalope": "~1.2.6",
+                "php": ">=5.3.3",
+                "phpcr/phpcr": "~2.1.2",
+                "phpcr/phpcr-utils": "^1.2.9"
+            },
+            "provide": {
+                "jackalope/jackalope-transport": "1.1.0"
+            },
+            "require-dev": {
+                "phpcr/phpcr-api-tests": "2.1.15",
+                "phpunit/dbunit": "~1.3",
+                "phpunit/phpunit": "4.7.*",
+                "psr/log": "~1.0"
+            },
+            "bin": [
+                "bin/jackalope"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Jackalope\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT",
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Jackalope Community",
+                    "homepage": "https://github.com/jackalope/jackalope-jackrabbit/contributors"
+                }
+            ],
+            "description": "Jackalope Transport library for Doctrine DBAL",
+            "homepage": "http://jackalope.github.io",
+            "keywords": [
+                "doctrine-dbal",
+                "phpcr",
+                "transport implementation"
+            ],
+            "time": "2016-06-09 06:33:29"
         },
         {
             "name": "jackalope/jackalope-jackrabbit",
